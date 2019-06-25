@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form #myform="ngForm">
+  <input #mytext="ngModel" type="text" name="name1" required minlength="5" ngModel>
+ <div *ngIf="mytxt.errors && (mytxt.dirty || mytxt.touched">
+   <div [hidden]="!mytxt.errors.required">
+     please enter valid data
+    </div>
+    <div [hidden]="mytxt.errors.minlength">
+      please enter minimum length
+    </div>
+ </div>
+<button type="submit" name="btn" [disabled]="!myform.valid" >Click me</button>
+</form>
+
+<router-outlet></router-outlet>

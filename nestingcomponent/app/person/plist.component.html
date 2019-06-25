@@ -1,0 +1,10 @@
+<div>
+    <input type="text" name="pid" [(ngModel)]="per.perid">
+    <input type="text" name="pnm" [(ngModel)]="per.pname">
+    <input type="text" name="paddr" [(ngModel)]="per.address">
+    <input type="button" name="btn" value="Submit" (click)="addData()">
+
+    <ul>
+        <li *ngFor="let p of perarr">{{p.perid}}-------{{p.pname}}</li>
+    </ul>
+</div>
